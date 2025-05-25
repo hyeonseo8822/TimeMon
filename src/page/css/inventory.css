@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Hakgyo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Hakgyo', sans-serif;    
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  top: 0; bottom: 0;
+
+  background-color: white;
+  
+  height: 852px;
+  width: 393px;
+}
