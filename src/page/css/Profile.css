@@ -5,19 +5,12 @@
     font-style: normal;
 }
 
-body {
-  margin: 0;
-  font-family: 'Hakgyo', sans-serif;    
-  background-color: black;
-}
-
 .container {
   display: flex;
   margin: 0 auto;
   top: 0; bottom: 0;
 
-  background-color: white;
-  
+  background-color: #fdf6e3;
   height: 852px;
   width: 393px;
 }

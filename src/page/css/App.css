@@ -1,23 +1,6 @@
-@font-face {
-    font-family: 'Hakgyo';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-body {
-  margin: 0;
-  font-family: 'Hakgyo', sans-serif;    
-  background-color: black;
-}
-
 .container {
   display: flex;
   margin: 0 auto;
-  top: 0; bottom: 0;
-
-  background-color: white;
-  
   height: 852px;
   width: 393px;
 }
@@ -37,13 +20,14 @@ body {
   position: absolute;
   margin-top :3px;
   width: 61px;
+  color: #5E523A;
 }
 .timerbtn {
   width: 49px;
 }
 .studyBar {
   position: relative;
-  margin-top: 200px;
+  margin-top: 220px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -86,8 +70,8 @@ body {
   top: 400px;
   transform: translateX(-50%);
   width: 334px;
-  height: 288px;
-  background-color: #FFF5D2;
+  height: 334px;
+  background-color: #fde7b6;
 }
 .avgText {
   margin-left: 10px;

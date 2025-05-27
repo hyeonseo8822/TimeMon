@@ -1,0 +1,17 @@
+.chart-container {
+  margin-left: -40px; 
+  margin-top: -40px;
+}
+
+.chart-container {
+  width: 370px;
+  height: 260px;
+  padding: 1rem;
+  color: white;
+}
+
+.chart-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}

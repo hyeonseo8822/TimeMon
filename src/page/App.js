@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './css/App.css';
 import BottomBar from '../component/BottomBar';
-
+import StudyBarChart from '../component/StudyBarChart';
 function App() {
   const navigate = useNavigate();
 
@@ -38,9 +38,9 @@ function App() {
         <div className='graphBack'>
           <p className='avgText'>일일평균</p>
           <p className='avgTime'>0시간 0분</p>
+          <StudyBarChart/>
         </div>
       </div>
-      
       <BottomBar />
     </div>
   );

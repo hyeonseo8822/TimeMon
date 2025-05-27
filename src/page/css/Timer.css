@@ -1,23 +1,62 @@
-@font-face {
-    font-family: 'Hakgyo';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-body {
-  margin: 0;
-  font-family: 'Hakgyo', sans-serif;    
-  background-color: black;
-}
-
 .container {
   display: flex;
   margin: 0 auto;
-  top: 0; bottom: 0;
-
-  background-color: white;
-  
   height: 852px;
   width: 393px;
+overflow-x: hidden;
+}
+
+.character {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timer {
+  margin-top: 130px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
+}
+
+.timerBtns {
+  position: absolute;
+  display: flex;
+  top: 40%;
+  left: 50%;
+  gap: 30px;
+  transform: translate(-50%);
+}
+.goalBar {
+  position: absolute;
+  width: 393px;
+  height: 50%;
+  bottom: 0;
+  background-color: rgb(253, 246, 227);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.goals {
+  width: 100%;
+  height: 60px; 
+  margin-top: -1px;
+  background-color: rgb(253, 246, 227);
+  border: 1px solid;
+  border-color: rgb(142, 140, 130);
+  overflow: scroll;
+  display: flex;
+  font-size: 22px;
+  gap : 220px
+}
+.goalText {
+  margin-left: 20px;
+}
+.noGoal {
+  color: #C2B69D;
+  position: absolute;
+  font-size: 35px;
+  width: 325px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

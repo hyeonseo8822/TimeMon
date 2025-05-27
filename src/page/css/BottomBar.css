@@ -3,14 +3,13 @@
   bottom: 0;
   width: 393px;
   height: 80px;
-  background-color: white;
+  background-color: rgb(255, 251, 243);
   display: flex;
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* 드롭섀도우 */
   z-index: 999;
 }
-
 .nav-button {
   background: none;
   border: none;
