@@ -9,6 +9,7 @@ function Inventory() {
   }
 
   return (
+
     <div className="container">
       <h2 className='charText'>나의 캐릭터</h2>
       <div className='Mycharacter'>

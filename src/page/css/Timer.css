@@ -1,9 +1,9 @@
+
 .container {
   display: flex;
   margin: 0 auto;
   height: 852px;
-  width: 393px;
-overflow-x: hidden;
+  width: 393px; 
 }
 
 .character {
