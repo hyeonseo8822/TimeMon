@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../page/css/BottomBar.css';
+import './css/BottomBar.css';
 
 const BottomBar = () => {
     const location = useLocation();

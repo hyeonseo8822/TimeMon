@@ -58,18 +58,20 @@
   margin-left: 180px;
   position: relative;
 }
+.graph {
+  margin-top: 100%;
+  margin-left: -80%;
+  margin-bottom: 100px;
+}
 .graphBack {
-  position: absolute;
-  left: 50%;
-  top: 400px;
-  transform: translateX(-50%);
   width: 334px;
-  height: 334px;
+  height: 320px;
   background-color: #fde7b6;
+
 }
 .avgText {
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .avgTime {
   margin-left: 10px;

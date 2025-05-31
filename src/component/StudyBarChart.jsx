@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
-import '../page/css/StudyBarChart.css';
+import './css/StudyBarChart.css';
 
 const data = [
   { name: '월', 공부시간: 2 },

@@ -11,6 +11,7 @@ function App() {
       <div className="character">
         <img src="/img/lemon.svg" alt="레몬이" />
       </div>
+      
       <div className='studyBar'>
         {/* 오늘 공부한 시간 */}
         <div className="studyTime">
@@ -38,7 +39,7 @@ function App() {
         <div className='graphBack'>
           <p className='avgText'>일일평균</p>
           <p className='avgTime'>0시간 0분</p>
-          <StudyBarChart/>
+          <StudyBarChart />
         </div>
       </div>
       <BottomBar />
