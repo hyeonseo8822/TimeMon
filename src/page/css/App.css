@@ -23,10 +23,16 @@
   position: relative;
   margin-top: 220px;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
 }
 .studyTimeBar {
   position: absolute;
+  width: 85%; height: 100px;
+  max-width: 650px;
+  background-color: #FFF6A9;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); 
   left: 50%;
   transform: translateX(-50%);
 }
@@ -44,30 +50,33 @@
   transform: translateX(-50%);
 } 
 .pageBar {
-  position: relative;
-  z-index: 0;
-  margin-top: 110px;
-}
-.clock {
-  margin-top : -40px;
-  margin-left: 80px;
   position: absolute;
+  width: 85%; height: 31px;
+  max-width: 650px;
+  background-color: #FFF6A9;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); 
+  margin-top: 120px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
-.inventory {
-  margin-top : -40px;
-  margin-left: 180px;
-  position: relative;
-}
-.graph {
-  margin-top: 100%;
-  margin-left: -80%;
-  margin-bottom: 100px;
+.pageBtns {
+  margin-top : 5px;
+  display: flex;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  gap : 90px
 }
 .graphBack {
-  width: 334px;
-  height: 320px;
+  position: absolute;
+  margin-top: 400px;
+  max-width: 650px;
+  width: 85%;
+  height: 330px;
   background-color: #fde7b6;
-
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 .avgText {
   margin-left: 10px;

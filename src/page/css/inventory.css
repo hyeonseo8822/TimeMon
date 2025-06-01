@@ -1,5 +1,6 @@
 .charText {
-  margin-top: 80px;
+  position: absolute;
+  margin-top: 40px;
   margin-left: 26px;
   font-size: 30px;
 }
@@ -37,7 +38,7 @@
   background-color: #FFDE8A;
   border-radius: 20px;
   display: flex;
-  top: 41%;
+  top: 350px;
   margin-left: 10px;
 }
 
@@ -70,12 +71,12 @@
   background-color: #fdf6e3;
 }
 .charBoxs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  margin-top: 105%;
-  margin-left: -43.5%;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+  margin-top: 410px;
   margin-bottom: 90px;
+
 }
 .charBox {
   width: 110px;
