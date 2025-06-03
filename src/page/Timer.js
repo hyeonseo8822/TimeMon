@@ -4,7 +4,7 @@ import BottomBar from '../component/BottomBar';
 import Button from '../component/Button';
 function Timer() {
 
-  function sayHello() {
+  function start() {
     alert("안녕!");
   }
 
@@ -19,8 +19,8 @@ function Timer() {
       </div>
 
       <div className='timerBtns'>
-        <Button text="시작" bgColor="#C4FF90" onClick={sayHello} />
-        <Button text="목표" bgColor="#FFFDC4" onClick={sayHello} />
+        <Button text="시작" bgColor="#C4FF90" onClick={start} />
+        <Button text="목표" bgColor="#FFFDC4" onClick={start} />
         <div className='goal'>
         </div>
       </div>
@@ -32,7 +32,6 @@ function Timer() {
 
       <BottomBar />
     </div>
-
   );
 }
 

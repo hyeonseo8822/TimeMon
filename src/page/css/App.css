@@ -5,69 +5,80 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 .timerbtn,
-.inventorybtn  {
-  font-family: 'Hakgyo', sans-serif;    
+.inventorybtn {
+  font-family: 'Hakgyo', sans-serif;
   background-color: transparent;
   border: none;
   cursor: pointer;
   position: absolute;
-  margin-top :3px;
+  margin-top: 3px;
   width: 61px;
   color: #5E523A;
 }
+
 .timerbtn {
   width: 49px;
 }
+
 .studyBar {
-  position: relative;
-  margin-top: 220px;
+  position: absolute;
+  top: 220px;
   left: 50%;
-  width: 100%;
   transform: translateX(-50%);
+  width: 100%;
 }
+
 .studyTimeBar {
   position: absolute;
-  width: 85%; height: 100px;
+  width: 85%;
+  height: 100px;
   max-width: 650px;
   background-color: #FFF6A9;
   border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
   left: 50%;
   transform: translateX(-50%);
 }
-.timeText{
+
+.timeText {
   position: absolute;
   margin-left: 15px;
-  margin-top : 5px;
+  margin-top: 5px;
   font-size: 18px;
 }
+
 .time {
   position: absolute;
   font-size: 40px;
   top: 10px;
   margin-left: 50%;
   transform: translateX(-50%);
-} 
+}
+
 .pageBar {
   position: absolute;
-  width: 85%; height: 31px;
+  width: 85%;
+  height: 31px;
   max-width: 650px;
   background-color: #FFF6A9;
   border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
   margin-top: 120px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
+
 .pageBtns {
-  margin-top : 5px;
+  margin-top: 5px;
   display: flex;
   margin-left: 50%;
   transform: translateX(-50%);
   width: 190px;
-  gap : 90px
+  gap: 90px
 }
+
 .graphBack {
   position: absolute;
   margin-top: 400px;
@@ -78,10 +89,12 @@
   margin-left: 50%;
   transform: translateX(-50%);
 }
+
 .avgText {
   margin-left: 10px;
   margin-top: 15px;
 }
+
 .avgTime {
   margin-left: 10px;
   margin-top: -10px;

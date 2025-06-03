@@ -11,32 +11,37 @@
   width: 100%;
   min-height: 100vh;
 }
+.container2 {
+  margin: 0 auto; 
+  background-color: #fdf6e3;
+  width: 100%;
+  min-height: 100vh;
+}
 .rectangle {
   width: 100%;
-  height: 160px;
+  height: 130px;
   background-color: #FFDD63;
 }
 .profile {
-  margin-top: 80px;
+  margin-top: 50px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
 .userName {
   position: absolute;
-  margin-top: 250px;
+  margin-top: 90px;
   font-size: 24px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
 .profileEdit {
   display: flex;
-  position: absolute;
   max-width: 550px;
   width: 80%;
   height: 34px;
   cursor: pointer;
   background-color: white;
-  margin-top: 290px;
+  margin-top: 130px;
   border-radius: 20px;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -56,14 +61,13 @@
 }
 .Times {
   width: 100%;
-  position: absolute;
   display: flex;
-  margin-top: 350px;
+  margin-top: 30px;
   gap: 50px;
   justify-content: center;
 }
 .accumulTime,.avgTime2{
-  width: 30%; height: 92px;
+  width: 35%; height: 84px;
   max-width: 350px;
   background-color: #FFE78E;
   border-radius: 20px;
@@ -77,3 +81,11 @@
   text-align: center;
 }
 
+.accumulTimeTextTime, .avgTime2TextTime {
+  margin-top: -5px;
+  font-size: 23px;
+}
+.calendarbox {
+  width: 100%;
+  height: 100px;
+}

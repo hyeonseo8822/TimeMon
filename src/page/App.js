@@ -6,7 +6,7 @@ function App() {
   const navigate = useNavigate();
 
   return (
-    <div className="container">
+    <div className="container2">
       {/* 캐릭터 이미지 */}
       <div className="character">
         <img src="/img/lemon.svg" alt="레몬이" />
