@@ -1,0 +1,27 @@
+[
+  {
+    "userId": "user123",
+    "date": "2025-06-04",
+    "goals": [
+      {
+        "subject": "국어",
+        "goalTime": 7200,
+        "actualTime": 3600
+      },
+      {
+        "subject": "수학",
+        "goalTime": 3600,
+        "actualTime": 1800
+      }
+    ],
+    "freeStudyTime": 2700,
+    "totalStudyTime": 8100
+  },
+  {
+    "userId": "user123",
+    "date": "2025-06-03",
+    "goals": [],
+    "freeStudyTime": 7200,
+    "totalStudyTime": 7200
+  }
+]

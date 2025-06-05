@@ -22,8 +22,7 @@ function StudyBarChart() {
           <CartesianGrid strokeDasharray="3 3" stroke="#444" />
           <XAxis dataKey="name" stroke="#5E523A" />
           <YAxis stroke="#5E523A" />
-          <Tooltip contentStyle={{ backgroundColor: "#333", borderColor: "#888", color: "#5E523A" }} />
-          {/* <Legend wrapperStyle={{ color: '#000' }} /> */}
+          <Tooltip contentStyle={{ backgroundColor: "#fdf6e3", borderColor: "#888", color: "#5E523A" }} />
           <Bar dataKey="공부시간" fill="#82ca9d" radius={[10, 10, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>

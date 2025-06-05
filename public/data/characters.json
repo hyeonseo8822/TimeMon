@@ -1,0 +1,14 @@
+[
+  {
+    "id": "fox",
+    "name": "여우",
+    "image": "fox.png",
+    "description": "영리하고 빠른 여우"
+  },
+  {
+    "id": "bear",
+    "name": "곰",
+    "image": "bear.png",
+    "description": "느긋하고 힘센 곰"
+  }
+]
