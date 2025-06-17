@@ -85,3 +85,15 @@
   border-radius: 20px;
   margin-left: 10px;
 } 
+.charProfile{
+  margin-top: -25px;
+  width: 150px;
+  height: 200px;
+}
+
+.char {
+  margin-left: -4px;
+  margin-top: -5px;
+  width: 120px;
+  height: 120px;
+}

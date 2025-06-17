@@ -23,7 +23,7 @@ const BottomBar = () => {
                 >
                     <img
                         src={
-                            (location.pathname === item.path || (item.path === '/app' && location.pathname === '/'))
+                            (location.pathname === item.path)
                                 ? item.activeImg
                                 : item.defaultImg
                         }

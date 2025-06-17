@@ -1,27 +1,178 @@
 [
   {
-    "userId": "user123",
-    "date": "2025-06-04",
+    "userId": "hyeonseo22",
+    "date": "2025-06-16",
     "goals": [
       {
+        "id": "2025-06-16_국어_0",
         "subject": "국어",
-        "goalTime": 7200,
-        "actualTime": 3600
+        "goalTime": 7200
       },
       {
+        "id": "2025-06-16_수학_1",
         "subject": "수학",
-        "goalTime": 3600,
-        "actualTime": 1800
+        "goalTime": 3600
+      },
+      {
+        "id": "2025-06-16_과학_2",
+        "subject": "과학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-17_수학_0",
+        "subject": "수학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-17_수학_0",
+        "subject": "수학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-17_과학_0",
+        "subject": "과학",
+        "goalTime": 10800
       }
     ],
-    "freeStudyTime": 2700,
+    "totalStudyTime": 6400
+  },
+  {
+    "userId": "hyeonseo22",
+    "date": "2025-06-10",
+    "goals": [
+      {
+        "id": "2025-06-10_영어_0",
+        "subject": "영어",
+        "goalTime": 3600
+      }
+    ],
+    "totalStudyTime": 4200
+  },
+  {
+    "userId": "hyeonseo22",
+    "date": "2025-06-09",
+    "goals": [
+      {
+        "id": "2025-06-09_과학_0",
+        "subject": "과학",
+        "goalTime": 5400
+      },
+      {
+        "id": "2025-06-09_사회_1",
+        "subject": "사회",
+        "goalTime": 3600
+      }
+    ],
+    "totalStudyTime": 10200
+  },
+  {
+    "userId": "hong",
+    "date": "2025-06-11",
+    "goals": [
+      {
+        "id": "2025-06-11_국어_0",
+        "subject": "국어",
+        "goalTime": 3600
+      },
+      {
+        "id": "2025-06-11_수학_1",
+        "subject": "수학",
+        "goalTime": 3600
+      }
+    ],
     "totalStudyTime": 8100
   },
   {
-    "userId": "user123",
-    "date": "2025-06-03",
-    "goals": [],
-    "freeStudyTime": 7200,
-    "totalStudyTime": 7200
+    "userId": "hong",
+    "date": "2025-06-10",
+    "goals": [
+      {
+        "id": "2025-06-10_영어_0",
+        "subject": "영어",
+        "goalTime": 2700
+      }
+    ],
+    "totalStudyTime": 3300
+  },
+  {
+    "userId": "hyeonseo22",
+    "date": "2025-06-15",
+    "goals": [
+      {
+        "id": "2025-06-15_수학_0",
+        "subject": "수학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-15_국어_1",
+        "subject": "국어",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-15_과학_2",
+        "subject": "과학",
+        "goalTime": 14400
+      },
+      {
+        "id": "2025-06-15_과학_3",
+        "subject": "과학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-15_과학_4",
+        "subject": "과학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-15_수학_5",
+        "subject": "수학",
+        "goalTime": 7200
+      }
+    ],
+    "totalStudyTime": 4000
+  },
+  {
+    "userId": "hyeonseo22",
+    "date": "2025-06-17",
+    "totalStudyTime": 3429,
+    "goals": [
+      {
+        "id": "2025-06-17_수학_0",
+        "subject": "수학",
+        "goalTime": 7260
+      },
+      {
+        "id": "2025-06-17_과학_0",
+        "subject": "과학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-17_국어_0",
+        "subject": "국어",
+        "goalTime": 7200
+      }
+    ]
+  },
+  {
+    "userId": "hyeonseo22",
+    "date": "2025-06-18",
+    "totalStudyTime": 51,
+    "goals": [
+      {
+        "id": "2025-06-18_수학_0",
+        "subject": "수학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-18_과학_0",
+        "subject": "과학",
+        "goalTime": 7200
+      },
+      {
+        "id": "2025-06-18_국어_0",
+        "subject": "국어",
+        "goalTime": 7200
+      }
+    ]
   }
 ]

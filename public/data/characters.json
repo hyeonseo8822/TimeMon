@@ -1,14 +1,36 @@
 [
   {
-    "id": "fox",
-    "name": "여우",
-    "image": "fox.png",
-    "description": "영리하고 빠른 여우"
+    "id": "lemon",
+    "name": "레몬이",
+    "image": "lemon.svg",
+    "description": "나는 공부보다 레몬이 좋아!"
+
   },
   {
-    "id": "bear",
-    "name": "곰",
-    "image": "bear.png",
-    "description": "느긋하고 힘센 곰"
+    "id": "pil",
+    "name": "필끼",
+    "image": "pil.svg",
+    "description": "너무 귀여운 필끼"
+  }
+  ,
+  {
+    "id": "don",
+    "name": "돈",
+    "image": "Don.svg",
+    "description": "너무 귀여운 돈"
+  }
+  ,
+  {
+    "id": "ke",
+    "name": "케",
+    "image": "ke.svg",
+    "description": "너무 귀여운 케"
+  }
+    ,
+  {
+    "id": "bang",
+    "name": "방",
+    "image": "bang.svg",
+    "description": "너무 귀여운 방"
   }
 ]

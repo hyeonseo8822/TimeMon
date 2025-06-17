@@ -6,7 +6,12 @@
   border-radius: 20px;
   font-size: 18px;
   cursor: pointer;
-  color : #5E523A;
+  color: #5E523A;
   font-family: 'Hakgyo', sans-serif;
   outline: none;
+  transition: transform 0.2s ease; /* 부드럽게 커지게 하기 위해 추가 */
+}
+
+.button:hover {
+  transform: scale(1.05); /* 살짝 커지게 */
 }

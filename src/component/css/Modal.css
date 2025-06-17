@@ -1,0 +1,183 @@
+.modal-background.bottom,
+.modal-background.top{
+    position: fixed;
+    top: -330px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+.modal-background.top {
+    top: 0px;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    pointer-events: auto;
+}
+
+.modal-content.small {
+    height: 160px;
+    width: 336px;
+}
+
+.modal-content.large {
+    width: 336px;
+    height: 321px;
+}
+
+.subject {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-left: -10px;
+}
+
+.subjectBox {
+    margin-top: -10px;
+    margin-left: 50px;
+    width: 191px;
+    height: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.subjectInput {
+    all: unset;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #5E523A;
+}
+
+.goalName {
+    display: flex;
+}
+
+.timeInput {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.timeInputText {
+    margin-right: 30px;
+}
+
+.timeWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 35px;
+}
+
+.time-unit button {
+    all: unset;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 1;
+    padding: 4px;
+    color: #FFF076;
+}
+
+.time-value {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.time-value .colon {
+    margin-left: 4px;
+}
+
+.colon {
+    font-size: 35px;
+}
+
+.notLoginText {
+    font-size: 18px;
+}
+
+
+.editName {
+    display: flex;
+    font-size: 20px;
+}
+
+.editNameWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.editNameBox {
+    display: flex;
+    width: 191px;
+    height: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.editNameInput {
+    all: unset;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #5E523A;
+}
+
+.characterDescription {
+    position: absolute;
+    font-size: 20px;
+    margin-top: -20px;
+    left: 55%;
+    transform: translate(-50%);
+    width: 250PX;
+    bottom: 80px;
+}
+
+.characterBox {
+    margin-top: 10px;
+}
+
+.characterName {
+    position: absolute;
+    margin-top: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+.characterImage { 
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}

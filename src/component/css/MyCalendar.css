@@ -1,46 +1,46 @@
 * {
-    color: #5E523A;
-    font-family: 'Hakgyo', sans-serif;
+  color: #5E523A;
+  font-family: 'Hakgyo', sans-serif;
 }
 
 .react-calendar {
-    width: 90%;
-    max-width: 600px;
-    background-color: white;
-    line-height: 2rem;
-    margin-top: 30px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
+  line-height: 2rem;
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 .react-calendar__tile--active {
-    background: #FFDD7F;
-    border-radius: 100px;
-    color: white;
-    width: 30px;
+  background: #FFDD7F;
+  border-radius: 100px;
+  color: white;
+  width: 30px;
 }
 
 button {
-    border: none;
-    background: transparent;
+  border: none;
+  background: transparent;
 }
 
 .react-calendar__tile {
-    padding: 0.4rem;
+  padding: 0.4rem;
 }
 
 
 .react-calendar__navigation__arrow {
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 .react-calendar__navigation__prev2-button,
 .react-calendar__navigation__next2-button {
-    display: none;
+  display: none;
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
@@ -51,17 +51,64 @@ button {
 .react-calendar__month-view__weekdays,
 .react-calendar__month-view__days {
   display: grid;
-  grid-template-columns: repeat(7, 1fr) ;
+  grid-template-columns: repeat(7, 1fr);
   padding: 0 1rem;
   box-sizing: border-box;
 }
 
 .react-calendar__tile {
   width: 100%;
-  aspect-ratio: 1 / 1; 
-  padding: 0.4rem; 
+  aspect-ratio: 1 / 1;
+  padding: 0.4rem;
 }
 
-.react-calendar__month-view__weekdays > div {
+.react-calendar__month-view__weekdays>div {
   text-align: center;
+}
+
+.react-calendar__tile {
+  position: relative;
+}
+
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.react-calendar__tile.hide-day abbr {
+  visibility: hidden;
+}
+
+.selectedDate {
+  position: absolute;
+  font-size: 30px;
+  left: 50%;
+  width: 240px;
+  transform: translateX(-50%);
+  margin-top: -10px;
+}
+
+.goalTimeText {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.goalList {
+  height: 100px;
+  overflow: scroll;
+  margin-top: 60px;
+}
+
+.totalStudyTimeText {
+  font-size: 25px;
+}
+
+.nototalStudyTimeText {
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

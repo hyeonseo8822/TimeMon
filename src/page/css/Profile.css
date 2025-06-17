@@ -16,6 +16,7 @@
   background-color: #fdf6e3;
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 100px;
 }
 .rectangle {
   width: 100%;
@@ -88,4 +89,36 @@
 .calendarbox {
   width: 100%;
   height: 100px;
+}
+.noLogin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  background-color: #FFDD63;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 30px;
+}
+
+.noLogin:hover {
+  background-color: #e6c852;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+.circle2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-top: 40px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFECBC;
+  border-radius: 100px;
+  
 }
