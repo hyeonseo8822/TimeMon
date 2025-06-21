@@ -325,7 +325,13 @@ function Timer() {
           <div className='goalName'>
             <p className='subject'>과목</p>
             <div className='subjectBox'>
-              <input type='text' className='subjectInput' value={subject} onChange={(e) => setSubject(e.target.value)} />
+              <input
+                type="text"
+                className="subjectInput"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                maxLength={10}
+              />
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 [
   {
-    "userId": "hyeonseo22",
+    "userId": "hyeonseo",
     "date": "2025-06-16",
     "goals": [
       {
@@ -37,7 +37,7 @@
     "totalStudyTime": 6400
   },
   {
-    "userId": "hyeonseo22",
+    "userId": "hyeonseo",
     "date": "2025-06-10",
     "goals": [
       {
@@ -49,7 +49,7 @@
     "totalStudyTime": 4200
   },
   {
-    "userId": "hyeonseo22",
+    "userId": "hyeonseo",
     "date": "2025-06-09",
     "goals": [
       {
@@ -95,7 +95,7 @@
     "totalStudyTime": 3300
   },
   {
-    "userId": "hyeonseo22",
+    "userId": "hyeonseo",
     "date": "2025-06-15",
     "goals": [
       {
@@ -132,7 +132,7 @@
     "totalStudyTime": 4000
   },
   {
-    "userId": "hyeonseo22",
+    "userId": "hyeonseo",
     "date": "2025-06-17",
     "totalStudyTime": 3429,
     "goals": [
@@ -154,9 +154,9 @@
     ]
   },
   {
-    "userId": "hyeonseo22",
+    "userId": "hyeonseo",
     "date": "2025-06-18",
-    "totalStudyTime": 51,
+    "totalStudyTime": 138,
     "goals": [
       {
         "id": "2025-06-18_수학_0",
@@ -174,5 +174,18 @@
         "goalTime": 7200
       }
     ]
+  },
+  {
+    "userId": "hyeonseo",
+    "date": "2025-06-21",
+    "goals": [
+      {
+        "id": "2025-06-21_수학이 너무너무 좋_0",
+        "subject": "수학이 너무너무 좋",
+        "goalTime": 7200
+      }
+    ],
+    "freeStudyTime": 0,
+    "totalStudyTime": 0
   }
 ]

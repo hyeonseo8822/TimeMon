@@ -199,6 +199,7 @@ function Profile() {
                 className="editNameInput"
                 value={newUserId}
                 onChange={(e) => setNewUserId(e.target.value)}
+                maxLength={10}
               />
             </div>
           </div>

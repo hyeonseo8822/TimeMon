@@ -13,12 +13,14 @@
   },
   {
     "id": "2",
-    "userId": "hyeonseo22",
+    "userId": "hyeonseo",
     "password": "1234",
     "email": "hyeonseojo929@gmail.com",
     "profileImage": "profile.svg",
-    "selectedCharacter": "pil",
-    "unlockedCharacters": [ "lemon"],
+    "selectedCharacter": "lemon",
+    "unlockedCharacters": [
+      "lemon"
+    ],
     "_lastUnlockCount": 0
   },
   {
