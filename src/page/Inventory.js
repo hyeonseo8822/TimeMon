@@ -68,7 +68,7 @@ function Inventory() {
     fetchUser();
   }, [userId]);
 
-  const unlockedIds = currentUser?.unlockedCharacters || [];
+  const unlockedIds = currentUser?.unlockedCharacters || ["lemon"];
   const filteredCharacters = characters.filter((char) => {
     if (filterStatus === 'unlocked') {
       return unlockedIds.includes(char.id);
@@ -111,41 +111,32 @@ function Inventory() {
   };
 
 
-
   useEffect(() => {
     const CharStudyTime = async () => {
       try {
-        if (!userId) {
-          const characterRes = await fetch('/data/characters.json');
-          const characterData = await characterRes.json();
-          setCharacters(characterData);
-
-          const defaultChar = characterData.find(char => char.id === 'lemon');
-          if (defaultChar) {
-            setCharacterImage(`/img/${defaultChar.image}`);
-            setCharacterAlt(defaultChar.name);
-            setSelectedCharacterId(defaultChar.id);
-            setCharacterDescription(defaultChar.description);
-          }
-          return;
-        }
-
-        const userRes = await fetch('/data/user.json');
         const characterRes = await fetch('/data/characters.json');
-
-        const users = await userRes.json();
         const characterData = await characterRes.json();
         setCharacters(characterData);
 
-        const currentUser = users.find(user => user.userId === userId);
-        if (currentUser) {
-          const selectedChar = characterData.find(char => char.id === currentUser.selectedCharacter);
-          if (selectedChar) {
-            setCharacterImage(`/img/${selectedChar.image}`);
-            setCharacterAlt(selectedChar.name);
-            setSelectedCharacterId(selectedChar.id);
-            setCharacterDescription(selectedChar.description);
+        let selectedChar = [];
+
+        if (!userId) {
+          selectedChar = characterData.find(char => char.id === 'lemon');
+        } else {
+          const userRes = await fetch('/data/user.json');
+          const users = await userRes.json();
+          const currentUser = users.find(user => user.userId === userId);
+
+          if (currentUser) {
+            selectedChar = characterData.find(char => char.id === currentUser.selectedCharacter);
           }
+        }
+
+        if (selectedChar) {
+          setCharacterImage(`/img/${selectedChar.image}`);
+          setCharacterAlt(selectedChar.name);
+          setSelectedCharacterId(selectedChar.id);
+          setCharacterDescription(selectedChar.description);
         }
       } catch (error) {
         console.error('데이터를 불러오는 중 오류:', error);
@@ -155,13 +146,13 @@ function Inventory() {
     CharStudyTime();
   }, [userId]);
 
+
   useEffect(() => {
     if (!currentUser || characters.length === 0) return;
 
     const unlockCount = Math.floor(accumulatedTime / 108000);
     const lastUnlockCount = currentUser._lastUnlockCount ?? 0;
     const newUnlocks = unlockCount - lastUnlockCount;
-
 
     if (newUnlocks <= 0) return;
 

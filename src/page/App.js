@@ -82,21 +82,10 @@ function App() {
 
         const todayStr = getTodayString();
 
-
-        const todayLog = logs.find(log =>
-          log.userId === userId &&
-          log.date.startsWith(todayStr)
-        );
-
         const foundTodayLog = logs.find(log =>
-          log.userId === userId && log.date.startsWith(todayStr)
+          log.userId === userId && log.date === todayStr
         );
         setTodayLog(foundTodayLog || null);
-
-        if (todayLog) {
-          setStudyTime(todayLog.totalStudyTime);
-          localStorage.setItem('goals', JSON.stringify(todayLog.goals));
-        }
 
         const thisWeekLogs = logs.filter(
           log => log.userId === userId && isThisWeek(log.date)
@@ -133,21 +122,16 @@ function App() {
 
     return () => clearInterval(intervalRef.current);
   }, [isRunning]);
-
+  
   useEffect(() => {
     if (todayLog) {
-      setStudyTime(todayLog.totalStudyTime);
       localStorage.setItem('goals', JSON.stringify(todayLog.goals));
-    }
-  }, [todayLog]);
-
-  useEffect(() => {
-    if (todayLog) {
       setStudyTime(todayLog.totalStudyTime + timerTime);
     } else {
       setStudyTime(timerTime);
     }
   }, [timerTime, todayLog]);
+
 
   return (
     <div className="container2">
@@ -185,7 +169,7 @@ function App() {
         <p className='avgTime'>
           {Math.floor(avgStudyTime / 3600)}시간 {Math.floor((avgStudyTime % 3600) / 60)}분
         </p>
-        <StudyBarChart userId={userId} todayLog={todayLog}/>
+        <StudyBarChart userId={userId} todayLog={todayLog} />
       </div>
       <BottomBar />
     </div>

@@ -17,7 +17,6 @@ function Profile() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newUserId, setNewUserId] = useState('');
-  const [totalStudyTimeSumSec, setTotalStudyTimeSumSec] = useState(0);
 
   const [errorModalOpen, setErrorModalOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -122,7 +121,18 @@ function Profile() {
         setUserLogs(filteredLogs);
 
         const totalTime = filteredLogs.reduce((sum, log) => sum + (log.totalStudyTime || 0), 0);
-        setTotalStudyTimeSumSec(totalTime);
+
+        const accumulated = totalTime + timerTime;
+        setAccumulatedTime(accumulated);
+
+        if (filteredLogs.length > 0) {
+          const avg = Math.floor(accumulated / filteredLogs.length);
+          setAverageTime(avg);
+        } else {
+          setAverageTime(0);
+        }
+
+        localStorage.setItem('accumulatedTime', accumulated.toString());
 
       } catch (error) {
         console.error('데이터를 불러오는 중 오류:', error);
@@ -132,31 +142,8 @@ function Profile() {
     if (userId) {
       CharStudyTime();
     }
-  }, [userId]);
-
-
-  useEffect(() => {
-    const accumulated = totalStudyTimeSumSec + timerTime;
-    setAccumulatedTime(accumulated);
-
-    if (userLogs.length > 0) {
-      const avg = Math.floor(accumulated / userLogs.length);
-      setAverageTime(avg);
-    } else {
-      setAverageTime(0);
-    }
-
-    localStorage.setItem('accumulatedTime', accumulated.toString());
-  }, [totalStudyTimeSumSec, timerTime, userLogs]);
-
-  useEffect(() => {
-    if (!userLogs || userLogs.length === 0) return;
-
-    const currentTotal = accumulatedTime;
-    const avg = Math.floor(currentTotal / userLogs.length);
-    setAverageTime(avg);
-  }, [accumulatedTime, userLogs]);
-
+  }, [userId, timerTime]);
+  
   const formatTime = (seconds) => {
     const totalMinutes = Math.floor(seconds / 60);
     const h = Math.floor(totalMinutes / 60);

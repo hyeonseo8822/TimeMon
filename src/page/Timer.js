@@ -2,7 +2,7 @@
 import './css/Timer.css'
 import BottomBar from '../component/BottomBar';
 import Button from '../component/Button';
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import Modal from '../component/Modal';
 
 function Timer() {
@@ -22,7 +22,6 @@ function Timer() {
   const timer = useRef(0);
   const timerP = useRef(null);
   const intervalRef = useRef(null);
-  const lastSentTime = useRef(0);
 
 
   const openModal = () => setIsModalOpen(true);
@@ -52,7 +51,6 @@ function Timer() {
   function toggleTimer() {
     setIsRunning(prev => !prev);
   }
-
   function getTodayString() {
     const today = new Date();
     const yyyy = today.getFullYear();
@@ -132,9 +130,18 @@ function Timer() {
       });
   }
 
-
   const restart = useCallback(() => {
     const currentTime = parseInt(localStorage.getItem('timerTime')) || 0;
+
+    const resetTimer = () => {
+      timer.current = 0;
+      if (timerP.current) {
+        timerP.current.innerText = '00:00:00';
+      }
+      localStorage.setItem('timerTime', 0);
+      setIsRunning(false);
+    };
+
     if (currentTime > 0) {
       fetch('http://localhost:5000/updateStudyTime', {
         method: 'POST',
@@ -146,31 +153,17 @@ function Timer() {
         })
       })
         .then(() => {
-          timer.current = 0;
-          if (timerP.current) {
-            timerP.current.innerText = '00:00:00';
-          }
-          localStorage.setItem('timerTime', 0);
-          setIsRunning(false);
+          resetTimer();
         })
         .catch((err) => {
           console.error('타이머 초기화 전 서버 전송 실패:', err);
-          timer.current = 0;
-          if (timerP.current) {
-            timerP.current.innerText = '00:00:00';
-          }
-          localStorage.setItem('timerTime', 0);
-          setIsRunning(false);
+          resetTimer();
         });
     } else {
-      timer.current = 0;
-      if (timerP.current) {
-        timerP.current.innerText = '00:00:00';
-      }
-      localStorage.setItem('timerTime', 0);
-      setIsRunning(false);
+      resetTimer();
     }
   }, [userId]);
+
 
 
   useEffect(() => {
@@ -219,7 +212,6 @@ function Timer() {
 
       const savedTime = parseInt(localStorage.getItem('timerTime')) || 0;
       timer.current = savedTime;
-      lastSentTime.current = savedTime;
       localStorage.setItem('timerTime', savedTime.toString());
 
       if (timerP.current) {
@@ -228,6 +220,19 @@ function Timer() {
     }
 
     return () => clearInterval(intervalRef.current);
+  }, [isRunning]);
+
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (isRunning) {
+        localStorage.setItem('serverOffTime', Date.now().toString());
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
   }, [isRunning]);
 
   useEffect(() => {
@@ -248,21 +253,9 @@ function Timer() {
   }, []);
 
   useEffect(() => {
-    const handleBeforeUnload = () => {
-      if (isRunning) {
-        localStorage.setItem('serverOffTime', Date.now().toString());
-      }
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [isRunning]);
-
-  useEffect(() => {
     localStorage.setItem('isRunning', isRunning ? 'true' : 'false');
   }, [isRunning]);
+
   useEffect(() => {
     const checkMidnight = () => {
       const now = new Date();

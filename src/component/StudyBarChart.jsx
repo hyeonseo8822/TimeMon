@@ -12,12 +12,11 @@ function StudyBarChart({ userId, todayLog }) {
 
   const days = ['일', '월', '화', '수', '목', '금', '토'];
 
-  // 🔁 실시간 timerTime 반영
   useEffect(() => {
     const interval = setInterval(() => {
       const latestTime = Number(localStorage.getItem('timerTime')) || 0;
       setTimerTime(latestTime);
-    }, 1000); // 1초마다 업데이트
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);

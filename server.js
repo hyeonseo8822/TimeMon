@@ -143,10 +143,6 @@ app.post('/deletegoal', (req, res) => {
 
   const userLog = dailyLogs.find(log => log.userId === userId && log.date === today);
 
-  if (!userLog) {
-    return res.status(404).json({ message: '해당 날짜의 로그가 없습니다.' });
-  }
-
   const originalLength = userLog.goals.length;
   userLog.goals = userLog.goals.filter(goal => String(goal.id) !== String(goalId));
 
@@ -154,7 +150,6 @@ app.post('/deletegoal', (req, res) => {
     return res.status(404).json({ message: 'goalId에 해당하는 목표가 없습니다.' });
   }
 
-  // 삭제가 된 상태이므로 파일에 다시 저장
   fs.writeFileSync(dailyLogsPath, JSON.stringify(dailyLogs, null, 2));
 
   return res.status(200).json({ message: '목표가 삭제되었습니다.' });
@@ -167,7 +162,6 @@ app.post('/updateStudyTime', (req, res) => {
       console.error('파일 읽기 오류:', err);
       return res.status(500).json({ message: '파일 읽기 오류' });
     }
-
     let logs = [];
     try {
       logs = JSON.parse(data);
@@ -175,7 +169,6 @@ app.post('/updateStudyTime', (req, res) => {
       console.error('JSON 파싱 오류:', parseErr);
       return res.status(500).json({ message: 'JSON 파싱 오류' });
     }
-
     const logIndex = logs.findIndex(log => log.userId === userId && log.date === date);
 
     if (logIndex !== -1) {
@@ -195,7 +188,7 @@ app.post('/updateStudyTime', (req, res) => {
         return res.status(500).json({ message: '파일 저장 오류' });
       }
 
-      return res.json({ message: '공부 시간 업데이트 완료', updatedLog: logs[logIndex] || logs[logs.length - 1] });
+      return res.json({ message: '공부 시간 업데이트 완료' });
     });
   });
 });
@@ -209,7 +202,7 @@ app.post('/update-userid', (req, res) => {
   fs.readFile(userFilePath, 'utf8', (err, userData) => {
     if (err) return res.status(500).send('user.json 파일 읽기 오류');
 
-    let users;
+    let users = [];
     try {
       users = JSON.parse(userData);
     } catch (parseErr) {
@@ -223,10 +216,8 @@ app.post('/update-userid', (req, res) => {
     const duplicate = users.find(user => user.userId === newUserId);
     if (duplicate) return res.status(409).send('이미 존재하는 userId입니다.');
 
-    // userId 변경
     users[userIndex].userId = newUserId;
 
-    // user.json 쓰기
     fs.writeFile(userFilePath, JSON.stringify(users, null, 2), 'utf8', (err) => {
       if (err) return res.status(500).send('user.json 파일 쓰기 오류');
 
@@ -268,7 +259,7 @@ app.post('/update-unlocked', (req, res) => {
   fs.readFile(userFilePath, 'utf8', (err, data) => {
     if (err) return res.status(500).send('파일 읽기 오류');
 
-    let users;
+    let users =[];
     try {
       users = JSON.parse(data);
     } catch {

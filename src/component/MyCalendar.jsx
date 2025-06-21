@@ -5,6 +5,7 @@ import Modal from './Modal';
 
 
 function MyCalendar() {
+  const userId = localStorage.getItem('userId');
 
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [checkedDates, setCheckedDates] = useState([]);
@@ -14,8 +15,7 @@ function MyCalendar() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userId = localStorage.getItem('userId');
-        if (!userId) return; // userId 없으면 리턴
+        if (!userId) return;
 
         const res = await fetch('/data/dailyLogs.json');
         const logs = await res.json();
@@ -34,31 +34,21 @@ function MyCalendar() {
 
     fetchData();
   }, []);
-  const tileClassName = ({ date, view }) => {
-    if (view === 'month') {
-      const dateString = date.toDateString();
-      const todayString = new Date().toDateString();
 
-      if (checkedDates.includes(dateString) && dateString !== todayString) {
-        return 'hide-day';
-      }
+  const tileClassName = ({ date, view }) => {
+    if (view === 'month' && isCheckedDate(date)) {
+      return 'hide-day';
     }
     return null;
   };
 
   const tileContent = ({ date, view }) => {
-    if (view === 'month') {
-      const dateString = date.toDateString();
-      const todayString = new Date().toDateString(); // 오늘 날짜
-
-      // 오늘 날짜는 제외하고 체크 표시
-      if (checkedDates.includes(dateString) && dateString !== todayString) {
-        return (
-          <div className="check-icon">
-            <img src="/img/check.svg" alt="check" width={40} />
-          </div>
-        );
-      }
+    if (view === 'month' && isCheckedDate(date)) {
+      return (
+        <div className="check-icon">
+          <img src="/img/check.svg" alt="check" width={40} />
+        </div>
+      );
     }
     return null;
   };
@@ -66,7 +56,6 @@ function MyCalendar() {
   const handleDateClick = (date) => {
     setSelectedDate(date);
 
-    const userId = localStorage.getItem('userId');
     const log = logs.find(
       (l) =>
         l.userId === userId &&
@@ -82,6 +71,11 @@ function MyCalendar() {
     const minutes = Math.floor((seconds % 3600) / 60);
     return `${hours}시간 ${minutes}분`;
   };
+  function isCheckedDate(date) {
+    const dateString = date.toDateString();
+    const todayString = new Date().toDateString();
+    return checkedDates.includes(dateString) && dateString !== todayString;
+  }
 
   return (
     <div>
